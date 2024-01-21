@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DroneController;
 use App\Http\Controllers\Admin\FlightController;
 use App\Http\Controllers\Admin\PilotController;
 use Illuminate\Support\Facades\Route;
@@ -39,3 +40,4 @@ Route::controller(FlightController::class)->group(function () {
 //Route::resource('flights', FlightController::class)->middleware('auth');
 
 Route::resource('pilots', PilotController::class)->middleware('auth');
+Route::resource('drones', DroneController::class)->middleware('auth');

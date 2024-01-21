@@ -330,7 +330,14 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        [
+            'text'        => 'Drones',
+            'url'         => '/drones',
+            'icon'        => 'fa fa-fighter-jet',
+            //'label'       => 4,
+            'label_color' => 'success',
+        ],
+        /*['header' => 'account_settings'],
         [
             'text' => 'profile',
             'url'  => 'admin/settings',
@@ -394,7 +401,7 @@ return [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
-        ],
+        ],*/
     ],
 
     /*

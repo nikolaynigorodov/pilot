@@ -33,10 +33,16 @@
                 @enderror
             </div>
             <div class="form-group">
-                <strong>Drone</strong>
-                <input type="text" name="drone" class="form-control" value="{{ $flight->drone }}" placeholder="Drone">
-                @error('drone')
-                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                <label for="drone_id">Drone</label>
+                <select class="form-control" id="drone_id" name="drone_id">
+                    <option selected>Open this select drone</option>
+                    @foreach($drones as $drone)
+                        <option
+                            value="{{ $drone->id }}" {{ $drone->id == $flight->drone->id ? 'selected' : ''}}>{{ $drone->name }}</option>
+                    @endforeach
+                </select>
+                @error('drone_id')
+                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                 @enderror
             </div>
             <div class="form-group">

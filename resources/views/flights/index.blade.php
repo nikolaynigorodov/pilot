@@ -34,7 +34,7 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $flight->pilot->name }}</td>
-                    <td>{{ $flight->drone }}</td>
+                    <td>{{ $flight->drone->name }}</td>
                     <td>
                         <p>
                             {!! FlightStatusHelper::getStatusWithColor($flight->flight_status) !!}

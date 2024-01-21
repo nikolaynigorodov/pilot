@@ -8,6 +8,7 @@ use App\Http\Requests\StoreFlightRequest;
 use App\Http\Requests\UpdateFlightRequest;
 use App\Models\Flight;
 use App\Models\Pilot;
+use App\Repository\DroneRepository;
 use App\Repository\FlightRepository;
 use App\Repository\PilotRepository;
 use Illuminate\Http\Request;
@@ -33,10 +34,11 @@ class FlightController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(PilotRepository $pilotRepository)
+    public function create(PilotRepository $pilotRepository, DroneRepository $droneRepository)
     {
         $pilots = $pilotRepository->getPilotWithOutFlight();
-        return view('flights.create', compact('pilots'));
+        $drones = $droneRepository->getAllDrones();
+        return view('flights.create', compact(['pilots','drones']));
     }
 
     /**
@@ -74,10 +76,14 @@ class FlightController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Flight $flight, PilotRepository $pilotRepository)
+    public function edit(Flight $flight,
+                         PilotRepository $pilotRepository,
+                         DroneRepository $droneRepository
+    )
     {
         $pilots = $pilotRepository->getPilotWithOutFlight();
-        return view('flights.edit', compact(['flight', 'pilots']));
+        $drones = $droneRepository->getAllDrones();
+        return view('flights.edit', compact(['flight', 'pilots', 'drones']));
     }
 
     /**

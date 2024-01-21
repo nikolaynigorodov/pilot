@@ -25,7 +25,7 @@ class FlightRepository
     public function createFlight($request)
     {
         return Flight::create([
-            'drone' => $request->drone,
+            'drone_id' => $request->drone_id,
             'pilot_id' => $request->pilot_id,
             'flight_status' => FlightStatusHelper::STATUS_FLIGHT,
             'start_date' => Carbon::now(),

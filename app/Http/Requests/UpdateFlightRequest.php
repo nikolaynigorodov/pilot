@@ -22,8 +22,8 @@ class UpdateFlightRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'drone' => 'required|max:255',
-            'pilot_id' => 'exists:pilots,id',
+            'pilot_id' => 'required|exists:pilots,id',
+            'drone_id' => 'required|exists:drones,id',
             'flight_status' => 'integer',
             'start_date' => 'required|date',
             'end_date' => 'required|date|after:start_date',

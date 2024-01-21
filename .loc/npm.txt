@@ -1,0 +1,5 @@
+php artisan ui vue --auth
+npm install
+npm run dev
+npm run watch (Щоб відслідковувати зміни)
+

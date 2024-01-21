@@ -1,0 +1,49 @@
+Install Laravel
+$ composer create-project laravel/laravel laravel-user-api.loc "8.*"
+php artisan route:list
+-----------------------------------------------------------------------
+php artisan make:controller TestController
+php artisan make:resource UserShowApiResource
+-----------------------------------------------------------------------
+php artisan make:migration create_tokens_table
+php artisan migrate
+create model and migration
+php artisan make:model Position -m
+
+php artisan make:model Position
+
+------------------------------------------------------------------------------
+For Job
+php artisan make:migration create_tokens_table
+php artisan make:model Token
+php artisan make:migration create_positions_table
+php artisan make:model Position
+
+php artisan make:factory PositionFactory --model=Positions
+php artisan make:seeder PositionSeeder
+php artisan db:seed
+
+
+For Validation
+php artisan make:request UserAllApiStoreRequest
+
+
+---------------------------------------
+
+----------------------------------------------------------------------------
+For Registration and Auth
+composer require laravel/ui
+npm install && npm run dev
+php artisan ui vue --auth
+
+-----------------------------------------------------------------------------
+For Image
+composer require intervention/image
+
+Change route api on api/v1 in Providers/RouteServiceProvider.php
+
+------------------------------------------------------------------------------
+php artisan cache:clear
+php artisan route:clear
+php artisan config:clear
+php artisan view:clear

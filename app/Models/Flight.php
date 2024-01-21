@@ -10,10 +10,15 @@ class Flight extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['drone', 'start_date', 'end_date', 'pilot_id', 'flight_status'];
+    protected $fillable = ['drone', 'start_date', 'end_date', 'pilot_id', 'drone_id', 'flight_status'];
 
     public function pilot(): BelongsTo
     {
         return $this->belongsTo(Pilot::class);
+    }
+
+    public function drone(): BelongsTo
+    {
+        return $this->belongsTo(Drone::class);
     }
 }

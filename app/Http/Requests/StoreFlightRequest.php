@@ -24,6 +24,7 @@ class StoreFlightRequest extends FormRequest
         return [
             'drone' => 'required|max:255',
             'pilot_id' => 'exists:pilots,id',
+            'drone_id' => 'exists:drones,id',
             'flight_status' => 'integer',
         ];
     }

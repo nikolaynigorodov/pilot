@@ -312,21 +312,21 @@ return [
             'can'  => 'manage-blog',
         ],*/
         [
-            'text'        => 'Flights Today',
-            'url'         => '/flights/today',
-            'icon'        => 'fa fa-rocket',
-            'label_color' => 'success',
-        ],
-        [
             'text'        => 'Flights All',
             'url'         => '/flights',
             'icon'        => 'fa fa-rocket',
             'label_color' => 'success',
         ],
         [
+            'text'        => 'Flights Today',
+            'url'         => '/flights/today',
+            'icon'        => 'fa fa-bomb',
+            'label_color' => 'success',
+        ],
+        [
             'text'        => 'Pilots',
             'url'         => '/pilots',
-            'icon'        => 'fa fa-fighter-jet',
+            'icon'        => 'fa fa-gamepad',
             'label'       => 4,
             'label_color' => 'success',
         ],

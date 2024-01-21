@@ -16,7 +16,7 @@ class FlightStatusHelper
             case self::STATUS_FLIGHT:
                 return "In Flight";
             case self::STATUS_END_FLIGHT:
-                return "End Flight";
+                return "End of Flight";
         }
     }
 
@@ -25,7 +25,7 @@ class FlightStatusHelper
         return [
             self::STATUS_AVAILABLE => 'Available',
             self::STATUS_FLIGHT => 'In Flight',
-            self::STATUS_END_FLIGHT => 'End Flight',
+            self::STATUS_END_FLIGHT => 'End of Flight',
         ];
     }
 
@@ -37,7 +37,7 @@ class FlightStatusHelper
             case self::STATUS_FLIGHT:
                 return "<span class='text-danger'>In Flight</span>";
             case self::STATUS_END_FLIGHT:
-                return "<span class='text-success'>End Flight</span>";
+                return "<span class='text-success'>End of Flight</span>";
         }
     }
 }
